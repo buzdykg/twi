@@ -11,7 +11,15 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+//Route::group(['before' => 'auth'], function() {
+
+	Route::get('/', ['uses' => 'HomeController@getIndex']);
+
+	Route::get('/phone', ['uses' => 'PhoneHelper@items']);
+	Route::get('/message', ['uses' => 'MessageHelper@items']);
+	Route::post('/message', ['uses' => 'MessageHelper@add']);
+//});
+
+Route::get('/login', ['uses' => 'AuthController@getLogin']);
+Route::get('/logout',['uses' => 'AuthController@getLogout']);
+Route::post('login', ['uses' => 'AuthController@postLogin']);

@@ -1,0 +1,33 @@
+.content {
+    margin-top: 100px;
+}
+
+.select-wide {
+    width: 100%;
+    text-align: center;
+}
+
+#form_send_sms textarea, #form_send_sms input[type=text] {
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+#form_send_sms textarea {
+    height: 100px;
+}
+
+#form_send_sms input[type=submit] {
+    width: 100%;
+    padding: 5px 10px;
+}
+
+.feature table {
+    width: 100%;
+}
+
+.feature table td, .feature table th {
+    border: 1px solid #555;
+    padding: 2px 4px;
+}

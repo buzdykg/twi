@@ -79,3 +79,16 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
+
+App::bindShared('Twilio', function($app)
+{
+	$twilio  = new Services_Twilio($app['config']['twilio.sid'], $app['config']['twilio.token']);
+
+	return $twilio;
+});
+
+App::error(function(Services_Twilio_RestException $exception) {
+	if (Request::ajax()) {
+		return Response::json(['message' => $exception->getMessage()], 400);
+	}
+});
