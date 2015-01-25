@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>_Twi</title>
 
-    <link rel="stylesheet" href="/br/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/br/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="/css/style.css"/>
 
     <script src="/br/jquery/dist/jquery.min.js"></script>
